@@ -16,14 +16,21 @@ import com.google.appengine.api.datastore.Key;
  * @description 测试类实体
  *
  */
-@PersistenceCapable
-//(identityType = IdentityType.APPLICATION)
+@PersistenceCapable(identityType = IdentityType.APPLICATION,detachable = "true")
 public class UserDTO 
 {
 	@PrimaryKey
-	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY )
 	private Key key;
 	
+	public Key getKey() {
+		return key;
+	}
+
+	public void setKey(Key key) {
+		this.key = key;
+	}
+
 	@Persistent
 	private String loginName;			//用户名
 	
@@ -39,13 +46,6 @@ public class UserDTO
 	@Persistent
 	private String status;				//状态
 
-	public Key getKey() {
-		return key;
-	}
-
-	public void setKey(Key key) {
-		this.key = key;
-	}
 
 	public String getLoginName() {
 		return loginName;

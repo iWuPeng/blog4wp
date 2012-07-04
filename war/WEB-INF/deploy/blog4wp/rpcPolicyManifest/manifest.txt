@@ -1,2 +1,3 @@
 # Module blog4wp
 # RPC service class, partial path of RPC policy file
+com.wupeng.blog.client.GreetingService, C425232928F73B0EE5E66F91D07E8523.gwt.rpc
