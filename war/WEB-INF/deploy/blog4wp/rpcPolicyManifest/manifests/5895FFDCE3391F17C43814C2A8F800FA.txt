@@ -1,0 +1,2 @@
+serviceClass: com.wupeng.blog.client.GreetingService
+path: C425232928F73B0EE5E66F91D07E8523.gwt.rpc

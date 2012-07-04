@@ -1,0 +1,14 @@
+	<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="false"></constant>
+	<constant name="struts.i18n.encoding" value="utf-8"></constant>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+	<include file="struts-default.xml" />
+	<package name="test" extends="struts-default" namespace="/">
+		<action name="list" class="userAction">
+			<result name="listUser">/listAllUser.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  
+  <context-param>
+	<param-name>contextConfigLocation</param-name>
+	<param-value>classpath:com/wupeng/blog/config/spring/applicationContext.xml</param-value>
+  </context-param>  
+
+  <!-- Servlets -->
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>com.wupeng.blog.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/blog4wp/greet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Blog4wp.html</welcome-file>
+  </welcome-file-list>
+
+  <servlet>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+    <init-param>
+      <param-name>services</param-name>
+      <param-value/>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <url-pattern>/_ah/spi/*</url-pattern>
+  </servlet-mapping>
+
+ <servlet>
+ 	<servlet-name>AddUser</servlet-name>
+ 	<servlet-class>com.wupeng.blog.web.servlet.AddUser</servlet-class>
+ </servlet>
+ <servlet-mapping>
+ 	<servlet-name>AddUser</servlet-name>
+ 	<url-pattern>/addUser.do</url-pattern>
+ </servlet-mapping>
+  
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+  
+  <listener>
+  	<listener-class>com.wupeng.blog.web.listener.Struts2ListenerOnGAE</listener-class>
+  </listener> 
+ 
+ <!-- set session time  -->
+<session-config>	
+	<session-timeout>25</session-timeout>
+</session-config>
+
+<!-- Chinese filter -->
+<filter>
+	<filter-name>encodingFilter</filter-name>
+	<filter-class>
+		org.springframework.web.filter.CharacterEncodingFilter
+	</filter-class>
+	<init-param>
+		<param-name>encoding</param-name>
+		<param-value>UTF-8</param-value>
+	</init-param>
+	<init-param>
+		<param-name>forceEncoding</param-name>
+		<param-value>true</param-value>
+	</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- struts2 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>
+			org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>	
+</web-app>
