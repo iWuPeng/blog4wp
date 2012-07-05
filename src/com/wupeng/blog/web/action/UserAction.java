@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.wupeng.blog.dao.IUserDao;
 import com.wupeng.blog.dao.jdoimp.UserDao;
-import com.wupeng.blog.vo.UserDTO;
+import com.wupeng.blog.vo.UserTestDTO;
 
 /**
  * @author WuPeng
@@ -30,7 +30,7 @@ public class UserAction extends BaseAction
 	 */
 	public String listUser()
 	{
-		List<UserDTO> userList = userDao.getAllUser();
+		List<UserTestDTO> userList = userDao.getAllUser();
 		request.setAttribute("userList", userList);
 		
 		return "listUser";
@@ -38,7 +38,7 @@ public class UserAction extends BaseAction
 	
 	public String addUser()
 	{
-		UserDTO user = new UserDTO();
+		UserTestDTO user = new UserTestDTO();
 		user.setLoginName("wuPeng");
 		user.setNickName("xiaofe");
 		user.setPassword("sssd");

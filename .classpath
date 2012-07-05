@@ -9,7 +9,6 @@
 	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-logging-1.0.4.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-pool-1.1.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/jstl.jar"/>
-	<classpathentry kind="lib" path="war/WEB-INF/lib/log4j-1.2.14.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/ognl-3.0.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-agent.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/spring-aop.jar"/>

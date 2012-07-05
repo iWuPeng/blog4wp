@@ -8,7 +8,7 @@ import javax.jdo.Transaction;
 
 import com.wupeng.blog.dao.IUserDao;
 import com.wupeng.blog.dao.PMF;
-import com.wupeng.blog.vo.UserDTO;
+import com.wupeng.blog.vo.UserTestDTO;
 
 /**
  * @author WuPeng
@@ -20,7 +20,7 @@ public class UserDao implements IUserDao
 	private PersistenceManager pm;
 	
 	@Override
-	public boolean saveUser(UserDTO user) 
+	public boolean saveUser(UserTestDTO user) 
 	{
 		pm = PMF.get().getPersistenceManager();
 		Transaction tx = pm.currentTransaction();
@@ -47,14 +47,14 @@ public class UserDao implements IUserDao
 	}
 
 	@Override
-	public List<UserDTO> getAllUser() 
+	public List<UserTestDTO> getAllUser() 
 	{
 		pm = PMF.get().getPersistenceManager();
 		String jdoSql = "SELECT FROM com.wupeng.blog.vo.UserDTO";
 		Query query = pm.newQuery(jdoSql);
 		Object result = query.execute();
 		
-		return (result == null)?null:(List<UserDTO>)result;
+		return (result == null)?null:(List<UserTestDTO>)result;
 	}
 
 }

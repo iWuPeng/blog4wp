@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.wupeng.blog.dao.IUserDao;
-import com.wupeng.blog.vo.UserDTO;
+import com.wupeng.blog.vo.UserTestDTO;
 
 /**
  * @author WuPeng
@@ -27,7 +27,7 @@ public class UserTestDao extends JdoDaoSupport implements IUserDao
 {
 	@Override
 	@Transactional
-	public boolean saveUser(UserDTO user) {
+	public boolean saveUser(UserTestDTO user) {
 		getJdoTemplate().makePersistent(user);
 		return true;
 	}
@@ -36,15 +36,15 @@ public class UserTestDao extends JdoDaoSupport implements IUserDao
 	@Override
 	@Transactional(readOnly=true)
 	 @SuppressWarnings("unchecked")
-	public List<UserDTO> getAllUser() 
+	public List<UserTestDTO> getAllUser() 
 	{
-		Query query = getPersistenceManager().newQuery(UserDTO.class);
+		Query query = getPersistenceManager().newQuery(UserTestDTO.class);
 		query.setOrdering("loginName DESC");
 		query.setRange(0,5);
 		Object result = query.execute();
 		query.close(result);
 		
-		return (result == null)?null:(List<UserDTO>)result;	
+		return (result == null)?null:(List<UserTestDTO>)result;	
 		/*
 		 * 直接使用jdoTemplate来查询，结构为空。但是通过获得PersistenceManager来做查询则没有问题，
 		 * 我想，这应该是和jdoTemplate有关，确切的说应该是和Spring对jdo的整合有关，gae可能不支持

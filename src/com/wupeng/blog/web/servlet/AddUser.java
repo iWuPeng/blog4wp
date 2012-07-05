@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.wupeng.blog.dao.IUserDao;
 import com.wupeng.blog.dao.jdoimp.UserDao;
-import com.wupeng.blog.vo.UserDTO;
+import com.wupeng.blog.vo.UserTestDTO;
 
 /**
  * @author WuPeng
@@ -28,7 +28,7 @@ public class AddUser extends HttpServlet
 			throws ServletException, IOException 
 	{
 		IUserDao userDao = new UserDao();
-		UserDTO user = new UserDTO();
+		UserTestDTO user = new UserTestDTO();
 		user.setLoginName(request.getParameter("loginName"));
 		user.setNickName(request.getParameter("nickName"));
 		user.setPassword(request.getParameter("password"));
@@ -41,7 +41,7 @@ public class AddUser extends HttpServlet
 		else
 			out.write("<script type='text/javascript' charset='UTF-8'>alert('fail!');</script>");
 		
-		List<UserDTO> userList = userDao.getAllUser();
+		List<UserTestDTO> userList = userDao.getAllUser();
 		request.setAttribute("userList", userList);
 		request.getRequestDispatcher("/listUser.jsp").forward(request, response);
 	}

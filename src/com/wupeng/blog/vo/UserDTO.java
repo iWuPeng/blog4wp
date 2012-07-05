@@ -12,9 +12,8 @@ import com.google.appengine.api.datastore.Key;
 
 /**
  * @author WuPeng
- * @date 2012.7.2
- * @description 测试类实体
- *
+ * @date 2012.7.5
+ * @description 用户表实体
  */
 @PersistenceCapable(identityType = IdentityType.APPLICATION,detachable = "true")
 public class UserDTO 
@@ -23,6 +22,30 @@ public class UserDTO
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY )
 	private Key key;
 	
+	@Persistent
+	private String loginName;				//登录名
+	
+	@Persistent
+	private String password;				//登录密码
+	
+	@Persistent
+	private String nickName;				//昵称
+	
+	@Persistent
+	private String email;					//邮箱
+	
+	@Persistent
+	private String url;						//个人主页地址
+	
+	@Persistent
+	private Date registeredTime;			//注册时间
+	
+	@Persistent
+	private int type;						//用户类型  1超级管理员 2普通管理员 3普通用户
+	
+	@Persistent
+	private int status;						//状态  0删除  1正常  2禁言
+
 	public Key getKey() {
 		return key;
 	}
@@ -30,22 +53,6 @@ public class UserDTO
 	public void setKey(Key key) {
 		this.key = key;
 	}
-
-	@Persistent
-	private String loginName;			//用户名
-	
-	@Persistent
-	private String password;			//密码
-	
-	@Persistent
-	private String nickName;			//昵称
-	
-	@Persistent
-	private Date registeredTime;		//注册时间
-	
-	@Persistent
-	private String status;				//状态
-
 
 	public String getLoginName() {
 		return loginName;
@@ -71,6 +78,22 @@ public class UserDTO
 		this.nickName = nickName;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
 	public Date getRegisteredTime() {
 		return registeredTime;
 	}
@@ -79,11 +102,19 @@ public class UserDTO
 		this.registeredTime = registeredTime;
 	}
 
-	public String getStatus() {
+	public int getType() {
+		return type;
+	}
+
+	public void setType(int type) {
+		this.type = type;
+	}
+
+	public int getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 }

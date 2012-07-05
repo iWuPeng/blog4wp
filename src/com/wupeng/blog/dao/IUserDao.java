@@ -2,7 +2,7 @@ package com.wupeng.blog.dao;
 
 import java.util.List;
 
-import com.wupeng.blog.vo.UserDTO;
+import com.wupeng.blog.vo.UserTestDTO;
 
 /**
  * @author WuPeng
@@ -16,11 +16,11 @@ public interface IUserDao
 	 * @param user 用户实体
 	 * @return	是否保存成功
 	 */
-	boolean saveUser(UserDTO user);
+	boolean saveUser(UserTestDTO user);
 	
 	/**
 	 * @description	获得所有用户
 	 * @return  用户列表
 	 */
-	List<UserDTO> getAllUser();
+	List<UserTestDTO> getAllUser();
 }
