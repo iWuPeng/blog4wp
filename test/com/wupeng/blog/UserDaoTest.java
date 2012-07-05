@@ -14,6 +14,11 @@ public class UserDaoTest extends TestCase
 		assertEquals(30, x+y+1);
 	}
 	
+	public void testHello()
+	{
+		System.out.println("Hello,world!");
+	}
+	
 	public static void main(String[] args) 
 	{
 		System.out.println("Hello,World!");
