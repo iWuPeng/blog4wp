@@ -10,5 +10,10 @@
 		<action name="list" class="userAction">
 			<result name="listUser">/listAllUser.jsp</result>
 		</action>
+		
+		<action name="go" class="goAction">
+			<result name="login">/WEB-INF/background/login.html</result>
+		</action>
 	</package>
+	
 </struts>

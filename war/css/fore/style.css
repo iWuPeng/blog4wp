@@ -1,0 +1,629 @@
+/*
+	Theme Name: News Story
+	Theme URI: http://newwpthemes.com/news-story-free-wordpress-theme/
+	Description: News Story is clean design free WordPress theme. Suitable for any niche, especially for news sites. Theme Options at admin panel.
+	Author: NewWpThemes.com
+	Author URI: http://newwpthemes.com/
+	Version: 4.1
+	Tags: black, two-columns, right-sidebar
+*/
+
+/* LAYOUT */
+
+body {
+	background-color: #838383;
+	font-family:"宋体", "新宋体",Georgia, Times, "Times New Roman", serif;
+	}
+
+#wrapper {
+	}
+
+#container {
+	padding: 10px;
+	background-color: #fff;
+	}
+
+#contentwrap {
+	background: #fff;
+	}
+
+a {
+	color: #1f638a;
+	text-decoration: none;
+	}
+
+a:hover {
+	color: #1f638a;
+	text-decoration: underline;
+	}
+/* HEADER */
+
+#header {
+	height: 90px;
+	padding-top:15px;
+	}
+
+#header h1 {
+	margin-bottom: 8px !important;
+	padding: 8px 0 0 0;
+	font-weight: normal;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-weight: bold;
+	font-size: 42px;
+	}
+
+#header h1 a, #header h1 a:visited {
+	color: #000;
+	text-decoration: none;
+	}
+
+
+#header h2 {
+	color: #7c7c7c;
+	font-size: 12px;
+	line-height: 14px; 
+	font-family: Georgia, Times, "Times New Roman", serif;
+	}
+
+	
+.topright {
+	text-align: right;
+	}
+
+.topright a {
+	color: #8b8b8b;
+	text-decoration: none;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	vertical-align: top;
+	}
+
+.topright a:hover {
+	color:#000;
+	}
+	
+/* NAVIGATION MENUS */
+
+#pagemenucontainer {
+	height: 20px;
+	border-bottom: 2px solid #cfcfcf;
+	}
+	
+#pagemenu {
+	height: 20px;
+	}
+
+#pagemenu, #pagemenu ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 1;
+	}
+#pagemenu {
+	margin-bottom: 1px;
+	}
+	
+#pagemenu ul {
+	float: left;
+	list-style: none;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	}
+	
+#pagemenu li {
+	float: left;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	}
+	
+#pagemenu ul li {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	}
+	
+#pagemenu li a, #pagemenu li a:link {
+	color: #8b8b8b;
+	display: block;
+    margin: 0px 3px 0px 0;
+	padding: 0 15px 4px 2px;
+	text-decoration: none;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	}
+	
+#pagemenu li a:hover, #pagemenu li a:active {
+	color: #000;
+	display: block;
+    margin: 0px 3px 0px 0;
+	padding: 0 15px 4px 2px;
+	text-decoration: none;
+	}
+	
+#pagemenu  li.current_page_item a {
+	color:#000;
+	}
+
+#pagemenu li:hover, #pagemenu li.sfhover { 
+	position: static;
+	}
+
+	
+.navcontainer {
+	height: 32px;
+	margin-top: 6px;
+	
+	}
+	
+#nav {
+	height: 26px;
+	border-bottom: 5px solid #000;
+	}
+
+#nav, #nav ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 1;
+	}
+#nav {
+	margin-bottom: 1px;
+	padding-left: 10px;
+	}
+	
+#nav ul {
+	float: left;
+	list-style: none;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	}
+	
+#nav li {
+	float: left;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	}
+	
+#nav ul li {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	}
+	
+#nav li a, #nav li a:link {
+	color: #000;
+	display: block;
+    margin: 0px 2px 0px 2px;
+	padding: 8px;
+	text-decoration: none;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	}
+	
+#nav li a:hover, #nav li a:active, .current-cat {
+	background: #000;
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	}
+	
+#nav  li.current-cat a {
+	background: #000;
+	color: #fff;
+	}
+
+#nav li:hover, #nav li.sfhover { 
+	position: static;
+	}
+	
+/* CONTENT */
+
+#content {
+	background-color: #fff;
+	padding: 15px 15px 15px 5px;
+	}
+	
+pre { overflow: auto; 
+	width: 470px; 
+	}
+
+.post {
+	padding-bottom: 20px;
+	}
+
+.post p {
+	margin-bottom: 10px;
+	}
+
+.title {
+	margin: 0;
+	padding: 0px;
+	line-height: 18px;
+	font-size: 16px;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	color: #000;
+	}
+
+	
+.title a {
+	text-decoration: none;
+	color: #000;
+	}
+
+.title a:hover {
+	text-decoration: none;
+	color: #1f638a;
+	}
+
+.pagetitle {
+	margin-bottom: 20px;
+	line-height: 20px;
+	font-size: 20px;
+	font-family: Arial, Verdana;
+	text-decoration: underline;
+}
+
+.postdate {
+	font-size: 11px;
+	font-family: Arial, Verdana;
+	font-style: italic;
+	}
+
+
+.postmeta {
+	font-size: 11px;
+	padding: 2px 4px;
+	font-family: Arial, Verdana;
+	}
+	
+.postdate img, .postmeta img {
+	border: none;
+	vertical-align: middle;
+	margin:2px;
+	}
+	
+.entry {
+	text-align: justify;
+	line-height: 20px;
+	padding-top: 8px;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-size: 12px;
+	color: #4d4c4c;
+	}
+.navigation {
+	padding: 10px 0;
+	}
+
+blockquote {
+	overflow: hidden;
+	padding-left: 9px;
+	font-style: italic;
+	color: #666;
+	border-left: 3px solid #CADAE7;
+	}
+	
+.post img {
+	max-width: 680px;
+	}
+
+img.wp-smiley {
+	max-height: 12px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	}
+	
+.aligncenter,
+div.aligncenter {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+	}
+
+.alignleft {
+   float: left;
+	}
+
+.alignright {
+   float: right;
+	}
+
+.wp-caption {
+   border: 1px solid #ddd;
+   text-align: center;
+   background-color: #f3f3f3;
+   padding-top: 4px;
+   margin: 10px;
+   /* optional rounded corners for browsers that support it */
+   -moz-border-radius: 3px;
+   -khtml-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   border-radius: 3px;
+	}
+
+.wp-caption img {
+   margin: 0;
+   padding: 0;
+   border: 0 none;
+	}
+
+.wp-caption p.wp-caption-text {
+   font-size: 11px;
+   line-height: 17px;
+   padding: 0 4px 5px;
+   margin: 0;
+	}
+	
+/* SIDEBAR(S) */
+
+.sidebaradbox {
+	margin-top: 5px; 
+	text-align:center;
+	}
+	
+.ad125 {
+	margin: 10px;
+	}
+
+
+.sidebar {
+	margin-right: 5px;
+	}
+	
+.sidebar a {
+	text-decoration: none;
+	color: #333;
+	}
+
+.sidebar a:hover {
+	color:#1f638a;
+	text-decoration: underline;
+	}
+	
+
+	
+#search input, #searchform input{
+	border: 1px solid #000;
+	}
+	
+#search label, #searchform label {
+	margin: 10px 0 10px 0;
+	padding: 4px 0 4px 0px;
+	font-size: 12px;
+	font-family: Arial;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000;
+	border-bottom: 4px solid #b8b7b7;
+	display: block;
+	}
+	
+#s {
+	width: 220px;
+	padding: 2px;
+	}
+	
+#searchsubmit {
+	border: 1px solid #000;
+	background: #000;
+	color: #fff;
+	}
+	
+#topsearch {
+	padding:15px 0 5px 0;
+	text-align: right;
+	}
+	
+#topsearch input {
+	border: 1px solid #000;
+	}
+	
+#topsearch label {
+	display: none;
+	}
+	
+#topsearch #s {
+	width: 230px;
+	padding: 2px;
+	}
+
+
+
+	
+.sidebarvideo {
+
+	}
+
+.sidebar h2 {
+	margin: 10px 0 0 0;
+	padding: 4px 0 4px 0px;
+	font-size: 12px;
+	font-family: Arial;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000;
+	border-bottom: 4px solid #b8b7b7;
+	}
+
+.sidebar ul {
+	list-style-type: none;
+	margin: 0px 0px 10px 0px;
+	padding: 0px;
+	}
+	
+.sidebar ul li {
+	list-style-type: none;
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+	}
+
+.sidebar ul ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	}
+	
+.sidebar ul li li {
+	padding: 3px 0px 3px 15px;
+	margin: 0px;
+	background: url(images/bullet.gif) no-repeat top left;
+	}
+	
+.sidebar ul li ul li {
+	background: #FFFFFF url(images/bullet.gif) no-repeat top left;
+	padding: 2px 0px 2px 15px;
+	margin: 2px 0;
+	}
+
+
+
+#wp-calendar th {
+	font-style: normal;
+	text-transform: capitalize;
+	color: #555;
+	background: #fff;
+	}
+#wp-calendar caption {
+	padding: 2px 4px;
+	text-transform: uppercase;	margin: 2px 0 2px 0;
+	background: #eee;
+	}
+
+#wp-calendar td {
+	color: #999;
+	font: normal 12px 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+	letter-spacing: normal;
+	padding: 2px 0;
+	text-align: center;
+	}
+
+#wp-calendar td:hover, #wp-calendar #today {
+	background: #eee;
+	color: #555;
+	}
+	
+#wp-calendar {
+	empty-cells: show;
+	font-size: 14px;
+	margin: 0;
+	font-weight: bold; 
+	width: 100%;
+	}
+
+
+/* FOOTER */
+
+#footer {
+	padding: 15px;
+	text-align: center;
+	color: #838383;
+	font-size: 12px;
+	border-top: 2px solid #cfcfcf;
+	}
+
+#footer a {
+	color: #838383;
+	} 
+
+#footer a:hover {
+	text-decoration: none;
+	} 
+	
+#credits {
+	color: #dddddd;
+	font-size: 11px;
+	padding: 10px;
+	text-align: center;
+	}	
+#credits a {
+	color: #dddddd;
+	} 
+
+#credits a:hover {
+	text-decoration: none;
+	} 
+	
+	
+/* COMMENTS */
+
+#comments h3 {
+	margin-bottom: 10px;	
+}
+
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform {
+	margin: 5px 10px 0 0;
+	}
+	
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+	
+#respond:after {
+		content: "."; 
+	    display: block; 
+	    height: 0; 
+	    clear: both; 
+	    visibility: hidden;
+	}
+	
+#commentform #submit {
+	margin: 0 0 5px auto;
+	float: right;
+	}
+
+.alt {
+	margin: 0;
+	padding: 10px;
+	}
+
+.commentlist {
+	padding: 0;
+	text-align: justify;
+	}
+
+.commentlist li {
+	margin: 15px 0 10px;
+	padding: 5px 5px 10px 10px;
+	list-style: none;
+
+	}
+	
+.commentlist li ul li { 
+	margin-right: -5px;
+	margin-left: 10px;
+}
+
+.commentlist p {
+	margin: 10px 5px 10px 0;
+}
+.children { padding: 0; }
+
+#commentform p {
+	margin: 5px 0;
+	}
+
+.nocomments {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	}
+
+.commentmetadata {
+	margin: 0;
+	display: block;
+	}
+	
+.post_thumbnail {
+    margin: 0 10px 10px 0;
+}

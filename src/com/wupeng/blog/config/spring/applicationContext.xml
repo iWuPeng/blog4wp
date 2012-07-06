@@ -53,4 +53,7 @@
 	<bean id="userAction" class="com.wupeng.blog.web.action.UserAction">
 		<property name="userDao" ref="userDao"></property>
 	</bean>
+	
+	<!-- 常用对象注入 -->
+	<import resource="application-base.xml"/>
 </beans>
