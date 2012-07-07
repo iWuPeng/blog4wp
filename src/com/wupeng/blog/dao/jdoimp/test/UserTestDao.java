@@ -1,4 +1,4 @@
-package com.wupeng.blog.dao.jdoimp;
+package com.wupeng.blog.dao.jdoimp.test;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -13,7 +13,7 @@ import org.springframework.orm.jdo.support.JdoDaoSupport;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.wupeng.blog.dao.IUserDao;
+import com.wupeng.blog.dao.IUserTestDao;
 import com.wupeng.blog.vo.UserTestDTO;
 
 /**
@@ -23,7 +23,7 @@ import com.wupeng.blog.vo.UserTestDTO;
  */
 @Repository
 @Transactional(readOnly = false)
-public class UserTestDao extends JdoDaoSupport implements IUserDao 
+public class UserTestDao extends JdoDaoSupport implements IUserTestDao 
 {
 	@Override
 	@Transactional

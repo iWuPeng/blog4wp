@@ -1,5 +1,5 @@
 
-package com.wupeng.blog.util;
+package com.wupeng.blog.util.lang;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

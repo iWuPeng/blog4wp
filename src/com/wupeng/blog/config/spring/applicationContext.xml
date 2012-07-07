@@ -44,16 +44,12 @@
 	    <aop:advisor advice-ref="txAdvice" pointcut-ref="addManagerMethod"/> 
 	</aop:config> 
 	
-	<!-- userDao -->
-	<bean id="userDao" class="com.wupeng.blog.dao.jdoimp.UserTestDao">
-		<property name="persistenceManagerFactory" ref="persistenceManagerFactory"></property>
-	</bean>
-	
-	<!-- userService -->
-	<bean id="userAction" class="com.wupeng.blog.web.action.UserAction">
-		<property name="userDao" ref="userDao"></property>
-	</bean>
+	<!-- 测试对象注入 -->
+	<import resource="application-test.xml"/>
 	
 	<!-- 常用对象注入 -->
 	<import resource="application-base.xml"/>
+	
+	<!-- 用户对象及操作注入 -->
+	<import resource="application-user.xml"/>
 </beans>

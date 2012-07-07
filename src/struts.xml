@@ -7,7 +7,7 @@
 	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
 	<include file="struts-default.xml" />
 	<package name="test" extends="struts-default" namespace="/">
-		<action name="list" class="userAction">
+		<action name="list" class="userTestAction">
 			<result name="listUser">/listAllUser.jsp</result>
 		</action>
 		
@@ -16,4 +16,5 @@
 		</action>
 	</package>
 	
+	<include file="com/wupeng/blog/config/struts2/struts-user.xml" />
 </struts>

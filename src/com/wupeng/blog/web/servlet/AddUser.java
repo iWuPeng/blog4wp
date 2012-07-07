@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.wupeng.blog.dao.IUserDao;
-import com.wupeng.blog.dao.jdoimp.UserDao;
+import com.wupeng.blog.dao.IUserTestDao;
+import com.wupeng.blog.dao.jdoimp.test.UserDaoAPI;
 import com.wupeng.blog.vo.UserTestDTO;
 
 /**
@@ -27,7 +27,7 @@ public class AddUser extends HttpServlet
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException 
 	{
-		IUserDao userDao = new UserDao();
+		IUserTestDao userDao = new UserDaoAPI();
 		UserTestDTO user = new UserTestDTO();
 		user.setLoginName(request.getParameter("loginName"));
 		user.setNickName(request.getParameter("nickName"));

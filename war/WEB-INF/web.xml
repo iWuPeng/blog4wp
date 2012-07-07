@@ -68,6 +68,10 @@
   <listener>
   	<listener-class>com.wupeng.blog.web.listener.Struts2ListenerOnGAE</listener-class>
   </listener> 
+  
+  <listener>
+  	<listener-class>com.wupeng.blog.util.GetInstanceByBeanName</listener-class>
+  </listener>
  
  <!-- set session time  -->
 <session-config>	
