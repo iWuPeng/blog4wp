@@ -30,7 +30,7 @@ public class UserDaoTest extends AbstractTransactionalSpringContextTests
 
 	
 	public void testSaveUser()
-	{
+	{	
 		UserDTO user = new UserDTO();
 		user.setLoginName("Test Wu");
 		user.setEmail("xiaowu@null.com");
